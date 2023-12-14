@@ -1,0 +1,15 @@
+<!-- tasks/task_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ task.title }}</title>
+</head>
+<body>
+
+<h1>{{ task.title }}</h1>
+<p>{{ task.description }}</p>
+
+<a href="{% url 'task_list' %}">Back to Task List</a>
+
+</body>
+</html>
