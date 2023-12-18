@@ -8,8 +8,37 @@
 
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-             {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'task_form_css.css' %}">
+             {% comment %} {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'task_form_css.css' %}"> {% endcomment %}
+    <style>
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff; /* Bootstrap link color */
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0056b3; /* Bootstrap link color on hover */
+}
+
+
+    </style>
 </head>
 <body>
 

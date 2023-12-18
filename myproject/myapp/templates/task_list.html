@@ -8,8 +8,41 @@
 
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'task_list_css.css' %}">
+     {% comment %} {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'task_list_css.css' %}"> {% endcomment %}
+    <style>
+
+        body {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff; /* Bootstrap primary color */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa; /* Bootstrap background color */
+        }
+
+        a {
+            color: #007bff; /* Bootstrap link color */
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #0056b3; /* Bootstrap link color on hover */
+        }
+
+    </style>
 </head>
 <body>
 
