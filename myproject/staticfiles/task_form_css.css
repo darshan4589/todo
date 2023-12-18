@@ -1,0 +1,25 @@
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff; /* Bootstrap link color */
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0056b3; /* Bootstrap link color on hover */
+}

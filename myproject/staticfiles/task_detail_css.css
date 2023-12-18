@@ -1,0 +1,13 @@
+
+body {
+    padding: 20px;
+}
+
+a {
+    color: #007bff; /* Bootstrap link color */
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0056b3; /* Bootstrap link color on hover */
+}

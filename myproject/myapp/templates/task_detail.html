@@ -1,15 +1,38 @@
 <!-- tasks/task_detail.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ task.title }}</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+         {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'task_detail_css.css' %}">
+  
 </head>
 <body>
 
-<h1>{{ task.title }}</h1>
-<p>{{ task.description }}</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">TASK DETAIL</a>
+</nav>
 
-<a href="{% url 'task_list' %}">Back to Task List</a>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <h1 style="color:red;" class="card-title">{{ task.title }}</h1>
+            <p class="card-text">{{ task.description }}</p>
+            <a class="btn btn-primary" href="{% url 'task_list' %}">Back to Task List</a>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
+
