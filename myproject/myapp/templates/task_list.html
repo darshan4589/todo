@@ -8,9 +8,9 @@
 
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-     {% comment %} {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'task_list_css.css' %}"> {% endcomment %}
-    <style>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'task_list_css.css' %}"> 
+    {% comment %} <style>
 
         body {
             padding: 20px;
@@ -42,7 +42,7 @@
             color: #0056b3; /* Bootstrap link color on hover */
         }
 
-    </style>
+    </style> {% endcomment %}
 </head>
 <body>
 
