@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -121,13 +122,26 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'myapp', 'static'),
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # You can adjust the path as needed.
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'myapp', 'static'),
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # You can adjust the path as needed.
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AWS_ACCESS_KEY_ID = "AKIAWHSOWG2UQ7L6OE5V"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "todobucket53"
+AWS_S3_REGION_NAME = "ap-south-1"  
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# Static files (CSS, JavaScript, images)
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+AWS_S3_SIGNATURE_VERSION = 's3v4' 
+# MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
